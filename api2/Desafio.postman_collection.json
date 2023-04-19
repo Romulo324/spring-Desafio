@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "ecf9b223-78c8-424c-921b-f4e8646ad1cd",
+		"name": "Desafio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26743633"
+	},
+	"item": [
+		{
+			"name": "funcionario",
+			"item": [
+				{
+					"name": "http://localhost:8080/funionario/novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Xaolin Matador De Porco\",\r\n    \"idade\":21,\r\n    \"cpf\":\"173-644-717-31\",\r\n    \"dataNascimento\":\"2003-04-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/funcionario/add?codigo=111&cnpj=1734352543",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"add"
+							],
+							"query": [
+								{
+									"key": "codigo",
+									"value": "111"
+								},
+								{
+									"key": "cnpj",
+									"value": "1734352543"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/funcionario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/funcionario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/funcinario/alterar/17364471731",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/funcinario/alterar/17364471731",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcinario",
+								"alterar",
+								"17364471731"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/funcionario/deletar/17364471731",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/funcionario/deletar/17364471731",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"deletar",
+								"17364471731"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "empresa",
+			"item": [
+				{
+					"name": "http://localhost:8080/empresa/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\":\"1734352543\",\r\n    \"nome\":\"BRQ Digital Solutions\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/empresa/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/empresa/nova",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/empresa/lista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								"lista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/empresa/alterar/1734352543",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"cnpj\":\"1734352543\",\r\n\"nome\":\"kitanda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/empresa/alterar/1734352543",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								"alterar",
+								"1734352543"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/empresa/deletar/1734352543",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/empresa/deletar/1734352543",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								"deletar",
+								"1734352543"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "salario",
+			"item": [
+				{
+					"name": "http://localhost:8080/salario/listar/codigo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"valorSalarial\":2.500,\r\n \"codigo\":111\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/salario/novo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salario",
+								"novo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/salario/novo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valorSalarial\":1.500,\r\n    \"codigo\":111\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/salario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/salario/alterar/111",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"valorSalarial\":1.500,\r\n \"codigo\":121\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/salario/alterar/111",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salario",
+								"alterar",
+								"111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/salario/deletar/111",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/salario/deletar/111",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salario",
+								"deletar",
+								"111"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
